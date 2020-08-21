@@ -39,10 +39,10 @@ define-command edit-current-buffer-directory -docstring 'edit in current buffer 
   }
 }
 
-define-command open-current-buffer-directory -docstring 'open current buffer dir with ranger' %{
+define-command open-current-buffer-directory -docstring 'open current buffer dir with lf' %{
   evaluate-commands %sh{
     buffer_dirname=$(dirname "$kak_bufname")
-    echo "ranger \"${buffer_dirname}\""
+    echo "lf \"${buffer_dirname}\""
   }
 }
 
